@@ -4,31 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ibrahim Shikarpuri Shopping Mall</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Noto Nastaliq Urdu', serif;
-     background: linear-gradient(135deg, #e0f7fa, #ffffff, #fce4ec); /* Trendy soft blue-pink fade */
- 
-
+      font-family: 'Noto Sans Arabic', sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #ffffff, #fce4ec);
+      margin: 0;
       padding: 0;
       direction: rtl;
     }
     header {
-      background: rgba(255, 255, 255, 0.8);
-backdrop-filter: blur(5px);
-border: 1px solid #ddd;
-border-radius: 12px;
-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-padding: 15px;
-margin-bottom: 15px;
-transition: transform 0.3s ease;
-}
-.category:hover {
-  transform: translateY(-5px);
-}
-
+      background: linear-gradient(90deg, #e3ffe7, #d9e7ff);
+      color: #0a0a23;
+      padding: 12px 20px;
       text-align: center;
+      font-family: 'Noto Sans Arabic', sans-serif;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid #c0e0ff;
+      transition: all 0.3s ease;
+    }
+    header h1 {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin: 0;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.6);
+    }
+    header p {
+      font-size: 14px;
+      color: #333;
+      margin-top: 5px;
     }
     nav {
       display: flex;
@@ -40,18 +45,29 @@ transition: transform 0.3s ease;
     nav a {
       margin: 5px 10px;
       text-decoration: none;
-      color: #198754;
+      color: #6a11cb;
       font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #2575fc;
+      text-decoration: underline;
     }
     .container {
       padding: 20px;
     }
     .category {
-      background-color: white;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(5px);
       border: 1px solid #ddd;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       padding: 15px;
-      margin-bottom: 10px;
-      border-radius: 8px;
+      margin-bottom: 15px;
+      transition: transform 0.3s ease;
+    }
+    .category:hover {
+      transform: translateY(-5px);
     }
     .cta {
       text-align: center;
@@ -66,31 +82,11 @@ transition: transform 0.3s ease;
       font-size: 18px;
     }
     footer {
-      header {
-  background: linear-gradient(90deg, #e3ffe7, #d9e7ff); /* soft pastel gradient */
-  color: #0a0a23;
-  padding: 12px 20px;
-  text-align: center;
-  font-family: 'Noto Sans Arabic', sans-serif;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid #c0e0ff;
-  transition: all 0.3s ease;
-}
-header h1 {
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  margin: 0;
-  text-shadow: 1px 1px 1px rgba(255,255,255,0.6);
-}
-header p {
-  font-size: 14px;
-  color: #333;
-  margin-top: 5px;
-}
-
-
-    
+      background-color: #198754;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
   </style>
 </head>
 <body>
