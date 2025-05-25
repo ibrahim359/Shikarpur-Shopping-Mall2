@@ -3,58 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>شکارپور دکان - فائنل ورژن</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Tabletop.js/1.5.1/tabletop.min.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Ibrahim Shikarpuri Shopping Mall</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Noto Nastaliq Urdu', serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+    }
+    header {
+      background-color: #198754;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #eee;
+      padding: 10px;
+    }
+    nav a {
+      margin: 5px 10px;
+      text-decoration: none;
+      color: #198754;
+      font-weight: bold;
+    }
+    .container {
+      padding: 20px;
+    }
+    .category {
+      background-color: white;
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+    }
+    .cta {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .cta a {
+      background-color: #198754;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 18px;
+    }
+    footer {
+      background-color: #198754;
+      color: white;
+      text-align: center;
+      padding: 10px;
     }
   </style>
 </head>
-<body class="bg-green-50 text-gray-900">
-  <header class="bg-green-600 text-white py-5 text-center shadow">
-    <h1 class="text-3xl font-bold">شکارپور آن لائن شاپنگ مال</h1>
-    <p class="text-sm">زندگی کی بہتر سمت — اردو اے آئی کے ساتھ</p>
+<body>
+  <header>
+    <h1>ابراہیم شکارپوری شاپنگ مال</h1>
+    <p>ایک مکمل آن لائن شاپنگ حل</p>
   </header>
 
-  <main class="container mx-auto px-4 py-8">
-    <div id="product-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      مصنوعات لوڈ ہو رہی ہیں...
+  <nav>
+    <a href="#">مردانہ لباس</a>
+    <a href="#">خواتین کا فیشن</a>
+    <a href="#">موبائلز</a>
+    <a href="#">الیکٹرانکس</a>
+    <a href="#">گھر و کچن</a>
+    <a href="#">بیوٹی</a>
+    <a href="#">گروسری</a>
+    <a href="#">بچوں کے کھلونے</a>
+    <a href="#">شوز اور بیگز</a>
+  </nav>
+
+  <div class="container">
+    <div class="category">
+      <h2>فلیش سیل</h2>
+      <p>بہترین ڈیلز اور رعایتیں، ابھی خریدیں!</p>
     </div>
-  </main>
+    <div class="category">
+      <h2>نئے آنے والے</h2>
+      <p>جدید اسٹائلز اور تازہ مصنوعات</p>
+    </div>
+    <div class="category">
+      <h2>موسمی آفرز</h2>
+      <p>گرمیوں کے خاص ڈسکاؤنٹس</p>
+    </div>
+  </div>
 
-  <footer class="bg-green-700 text-white text-center py-4">
-    <p>© 2025 شکارپور دکان | تعاون: اردو اے آئی</p>
+  <div class="cta">
+    <a href="https://wa.me/923193487567" target="_blank">ابھی واٹس ایپ پر آرڈر کریں</a>
+  </div>
+
+  <footer>
+    <p>© 2025 ابراہیم شکارپوری شاپنگ مال - تمام حقوق محفوظ ہیں۔</p>
   </footer>
-
-  <script>
-    function showProducts(data) {
-      const container = document.getElementById("product-list");
-      container.innerHTML = "";
-      data.forEach(item => {
-        if (item.Product && item.Price && item.ImageURL && item.Description) {
-          container.innerHTML += `
-            <div class="bg-white rounded shadow p-4">
-              <img src="${item.ImageURL}" alt="${item.Product}" class="w-full h-40 object-cover rounded mb-3">
-              <h2 class="text-xl font-bold mb-1">${item.Product}</h2>
-              <p class="text-sm text-gray-600 mb-1">کیٹیگری: ${item.Category || 'نامعلوم'}</p>
-              <p class="text-sm mb-1">${item.Description}</p>
-              <p class="text-green-700 font-semibold mb-2">قیمت: ${item.Price}</p>
-              <a href="${item.WhatsAppLink}" target="_blank" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded block text-center">واٹس ایپ پر آرڈر کریں</a>
-            </div>`;
-        }
-      });
-    }
-
-    window.addEventListener("DOMContentLoaded", () => {
-      Tabletop.init({
-        key: '1Vbsaj_GMkoSAUsZ7FKDnVhHA5rs1qxuF9cuFRsPC9Fg',
-        callback: showProducts,
-        simpleSheet: true
-      });
-    });
-  </script>
 </body>
 </html>
